@@ -1,8 +1,8 @@
 import { Point, PointLike, toPoint } from './Point';
 
 export class Bounds {
-  private min!: Point;
-  private max!: Point;
+  public min!: Point;
+  public max!: Point;
   constructor(a: PointLike | Array<PointLike>, b?: PointLike) {
     if (!a) {
       return;

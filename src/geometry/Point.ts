@@ -1,4 +1,4 @@
-import { formatNum, isArray } from '../core/Util';
+import { formatNum, isArray } from '@/core/Util';
 
 const trunc =
   Math.trunc ||

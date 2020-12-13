@@ -7,6 +7,9 @@ module.exports = {
       jsx: true, // Allows for the parsing of JSX
     },
   },
+  env: {
+    node: true,
+  },
   extends: [
     // recommended
     'eslint:recommended',
@@ -18,7 +21,7 @@ module.exports = {
   ],
   rules: {
     // https://eslint.org/docs/rules/complexity
-    complexity: ['error', 12],
+    complexity: ['error', 13],
     // https://eslint.org/docs/rules/max-depth
     'max-depth': ['error', 4],
     // https://github.com/typescript-eslint/typescript-eslint/blob/v4.6.1/packages/eslint-plugin/docs/rules/naming-convention.md

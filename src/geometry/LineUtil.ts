@@ -1,4 +1,4 @@
-import { Bounds } from '.';
+import { Bounds } from './Bounds';
 import { Point } from './Point';
 
 /*

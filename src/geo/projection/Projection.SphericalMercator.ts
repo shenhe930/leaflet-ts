@@ -12,7 +12,7 @@ import { Projection } from './index';
  * a sphere. Used by the `EPSG:3857` CRS.
  */
 
-const R = 6378137;
+export const R = 6378137;
 const MAX_LATITUDE = 85.0511287798;
 
 export const SphericalMercator: Projection = {

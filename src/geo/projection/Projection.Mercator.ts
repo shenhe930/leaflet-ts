@@ -10,7 +10,7 @@ import { Point } from '@/geometry/Point';
 import { Projection } from './index';
 import { LatLng } from '../LatLng';
 
-const R = 6378137;
+export const R = 6378137;
 const R_MINOR = 6356752.314245179;
 
 export const Mercator: Projection = {

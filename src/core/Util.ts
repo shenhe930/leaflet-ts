@@ -27,3 +27,9 @@ export function wrapNum(
   const d = max - min;
   return x === max && includeMax ? x : ((((x - min) % d) + d) % d) + min;
 }
+
+// @function falseFn(): Function
+// Returns a function which always returns `false`.
+export function falseFn(): false {
+  return false;
+}

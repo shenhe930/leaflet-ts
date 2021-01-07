@@ -45,3 +45,32 @@ export function trim(str: string): string {
 export function splitWords(str: string): string[] {
   return trim(str).split(/\s+/);
 }
+
+// @function extend(dest: Object, src?: Object): Object
+// Merges the properties of the `src` object (or multiple objects) into `dest` object and returns the latter. Has an `L.extend` shortcut.
+export function extend(
+  dest: Record<string, unknown>,
+  ...args: Array<Record<string, unknown>>
+): Record<string, unknown> {
+  let i, j, len, src;
+
+  for (j = 0, len = args.length; j < len; j++) {
+    src = args[j];
+    for (i in src) {
+      dest[i] = src[i];
+    }
+  }
+  return dest;
+}
+// @property lastId: Number
+// Last unique ID used by [`stamp()`](#util-stamp
+export let lastId = 0;
+
+// @function stamp(obj: Object): Number
+// Returns the unique ID of an object, assigning it one if it doesn't have it.
+export function stamp(obj: any): number {
+  /*eslint-disable */
+  obj._leaflet_id = obj._leaflet_id || ++lastId;
+  return obj._leaflet_id;
+  /* eslint-enable */
+}
